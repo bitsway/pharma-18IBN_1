@@ -1706,7 +1706,6 @@ var  apipath_base_photo_dm ='http://w02.yeapps.com/ipi/syncmobile_417_new_ibn_ne
 													
 													localStorage.repType=resultArray[40]
 													localStorage.syncType=resultArray[41]
-													
 													//alert (localStorage.repType)
 													
 													
@@ -2420,8 +2419,6 @@ localStorage.report_button_tr='<input type="submit" id="loginButton" onClick="s_
 
 function setScheduleDate(scheduleDate){
 	localStorage.scheduled_date=scheduleDate;
-	
-	
 	//alert (localStorage.scheduled_date)
 }
 //=================Bonus Combo==========
@@ -4051,7 +4048,7 @@ function marketNextLV(lvalue) {
 	getLocationInfo_ready()
 	//alert (localStorage.doctor_flag)
 	if (localStorage.doctor_flag==1){
-		//alert (localStorage.syncType)
+		
 		if (localStorage.syncType=='OFFLINE'){
 			marketNext_doc();	
 		}
