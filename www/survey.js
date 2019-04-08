@@ -5427,7 +5427,7 @@ function marketNext_doc_online() {
 				//http://127.0.0.1:8000/lscmreporting/syncmobile/getClientInfo?cid=LSCRM&rep_id=1001&rep_pass=123&synccode=2568&client_id=R100008
 				
 	//			//// ajax-------
-	alert (localStorage.base_url+'getMarketDocList?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&market_id='+market_Id+'&scheduled_Type='+localStorage.scheduled_Type+'&user_type='+localStorage.user_type)
+	//alert (localStorage.base_url+'getMarketDocList?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&market_id='+market_Id+'&scheduled_Type='+localStorage.scheduled_Type+'&user_type='+localStorage.user_type)
 	$.ajax(localStorage.base_url+'getMarketDocList?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&market_id='+market_Id+'&scheduled_Type='+localStorage.scheduled_Type+'&user_type='+localStorage.user_type,{
 								// cid:localStorage.cid,rep_id:localStorage.user_id,rep_pass:localStorage.user_pass,synccode:localStorage.synccode,
 								type: 'POST',
