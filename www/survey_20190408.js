@@ -1911,47 +1911,47 @@ var  apipath_base_photo_dm ='http://w02.yeapps.com/ipi/syncmobile_417_new_ibn_ne
 										//===========Market===========================
 												//------------- Visit Plan Market List / Client Profile Market List / Unschedule
 													//alert (localStorage.marketStrDoc);
-													//if (localStorage.marketStrDoc!=''){
-//														var docMarketList = localStorage.marketStrDoc.split('<rd>');
-//														var docMarketListShowLength=docMarketList.length	
-//														var docMarketComb=''
-//														var currentDate = new Date()
-//														var day = currentDate.getDate();if(day<10)	{day="0" +day};
-//														var month = currentDate.getMonth() + 1;if(month<10)	{month="0" +month};
-//														var year = currentDate.getFullYear()
-//														var CDate=  year + "-" + month + "-" + day
-//														//alert (day.length)
-//														//var CDate =yyyy+'-'+mm+'-'+dd	
-//														var todayFlag=0
-//														var tomorrowFlag=0		
-//														//alert (docMarketListShowLength)			
-//														for (var k=0; k < docMarketListShowLength; k++){
-//															var docMarketValueArray = docMarketList[k].split('<fd>');
-//															docMarketID=docMarketValueArray[0];
-//															docMarketName=docMarketValueArray[1];
-//															docMarketDate=docMarketValueArray[2];
-//															var docmarketNameID=docMarketName+'|'+docMarketID;
-//															
-//													//alert (CDate)
-//													//alert (docMarketDate)
-//													
-//													if ((docMarketDate!=CDate) &&(tomorrowFlag==0) && (docMarketDate.length > 5)) {
-//																docMarketComb+='<li class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin;background-color:#EDFBFE"><font  style="font-size:24; font-weight:bold;color:#009">Tomorrow</font></li>';
-//																tomorrowFlag=1
-//															}
-//															if ((docMarketDate==CDate) &&(todayFlag==0)) {
-//																docMarketComb+='<li class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin;background-color:#EDFBFE"><font  style="font-size:24; font-weight:bold;color:#009">Today</font></li>';
-//																todayFlag=1
-//															}
-//															if (docMarketID!=''){
-//																docMarketComb+='<li class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin"><a onClick="setScheduleDate(\''+docMarketDate+'\');marketNextLV(\''+docmarketNameID+'\');"><font class="name" style="font-size:18; font-weight:bold">'+docmarketNameID+'</a></font></li>';
-//															//alert (docMarketComb)	
-//																}
-//														}
-//														
-//																					
-//														localStorage.docMarketComb=docMarketComb;								
-//													}
+													if (localStorage.marketStrDoc!=''){
+														var docMarketList = localStorage.marketStrDoc.split('<rd>');
+														var docMarketListShowLength=docMarketList.length	
+														var docMarketComb=''
+														var currentDate = new Date()
+														var day = currentDate.getDate();if(day<10)	{day="0" +day};
+														var month = currentDate.getMonth() + 1;if(month<10)	{month="0" +month};
+														var year = currentDate.getFullYear()
+														var CDate=  year + "-" + month + "-" + day
+														//alert (day.length)
+														//var CDate =yyyy+'-'+mm+'-'+dd	
+														var todayFlag=0
+														var tomorrowFlag=0		
+														//alert (docMarketListShowLength)			
+														for (var k=0; k < docMarketListShowLength; k++){
+															var docMarketValueArray = docMarketList[k].split('<fd>');
+															docMarketID=docMarketValueArray[0];
+															docMarketName=docMarketValueArray[1];
+															docMarketDate=docMarketValueArray[2];
+															var docmarketNameID=docMarketName+'|'+docMarketID;
+															
+													//alert (CDate)
+													//alert (docMarketDate)
+													
+													if ((docMarketDate!=CDate) &&(tomorrowFlag==0) && (docMarketDate.length > 5)) {
+																docMarketComb+='<li class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin;background-color:#EDFBFE"><font  style="font-size:24; font-weight:bold;color:#009">Tomorrow</font></li>';
+																tomorrowFlag=1
+															}
+															if ((docMarketDate==CDate) &&(todayFlag==0)) {
+																docMarketComb+='<li class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin;background-color:#EDFBFE"><font  style="font-size:24; font-weight:bold;color:#009">Today</font></li>';
+																todayFlag=1
+															}
+															if (docMarketID!=''){
+																docMarketComb+='<li class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-location" style="border-bottom-style:solid; border-color:#CBE4E4;border-bottom-width:thin"><a onClick="setScheduleDate(\''+docMarketDate+'\');marketNextLV(\''+docmarketNameID+'\');"><font class="name" style="font-size:18; font-weight:bold">'+docMarketName+'</a></font></li>';
+															//alert (docMarketComb)	
+																}
+														}
+														
+																					
+														localStorage.docMarketComb=docMarketComb;								
+													}
 													
 													//$('#tour_market_combo_id_lv').empty();
 //													$('#tour_market_combo_id_lv').append(localStorage.visit_plan_marketlist_combo);
@@ -2422,7 +2422,6 @@ function setScheduleDate(scheduleDate){
 	localStorage.scheduled_date=scheduleDate;
 	
 	
-	
 	//alert (localStorage.scheduled_date)
 }
 //=================Bonus Combo==========
@@ -2506,7 +2505,7 @@ function doctor_visit_plan() {
 	localStorage.visit_page="NO";
 	localStorage.scheduleDocFlag=1
 	//addMarketList();
-	localStorage.scheduled_Type='schedule';
+	
 	//alert (localStorage.base_url+'schedule_sync?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode)
 	$.ajax(localStorage.base_url+'schedule_sync?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode,{
 								type: 'POST',
@@ -2569,11 +2568,8 @@ function doctor_visit_plan() {
 																}
 														}
 														
-														//alert (localStorage.docMarketComb)							
-														localStorage.docMarketComb=docMarketComb;		
-														$('#tour_market_combo_id_lv').empty();
-														$('#tour_market_combo_id_lv').append(localStorage.docMarketComb);	
-														//alert ('Done')					
+																					
+														localStorage.docMarketComb=docMarketComb;								
 													}
 										
 									
@@ -2610,8 +2606,6 @@ function doctor_visit() {
 	localStorage.saved_data_submit=0;
 	localStorage.visit_page="NO";
 	localStorage.scheduleDocFlag=0
-	
-	localStorage.scheduled_Type='';
 	//addMarketList();
 	//if (localStorage.doctor_flag==1 && localStorage.cTeam==1) {addMarketListCteam();}else{addMarketList();}
 	addMarketList();
@@ -5378,7 +5372,6 @@ function marketNext_doc() {
 
 //=========================================================
 function marketNext_doc_online() {
-	
 	localStorage.location_detail=''
 	$("#unscheduled_m_client_combo_id").val('');
 	
@@ -5427,8 +5420,8 @@ function marketNext_doc_online() {
 				//http://127.0.0.1:8000/lscmreporting/syncmobile/getClientInfo?cid=LSCRM&rep_id=1001&rep_pass=123&synccode=2568&client_id=R100008
 				
 	//			//// ajax-------
-	alert (localStorage.base_url+'getMarketDocList?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&market_id='+market_Id+'&scheduled_Type='+localStorage.scheduled_Type+'&user_type='+localStorage.user_type)
-	$.ajax(localStorage.base_url+'getMarketDocList?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&market_id='+market_Id+'&scheduled_Type='+localStorage.scheduled_Type+'&user_type='+localStorage.user_type,{
+	//alert (localStorage.base_url+'getMarketDocList?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&market_id='+market_Id)
+	$.ajax(localStorage.base_url+'getMarketDocList?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&market_id='+market_Id,{
 								// cid:localStorage.cid,rep_id:localStorage.user_id,rep_pass:localStorage.user_pass,synccode:localStorage.synccode,
 								type: 'POST',
 								timeout: 30000,
@@ -7659,7 +7652,7 @@ function visitSubmit_doc(){
 											else {	
 												$("#visit_submit_doc").hide();
 												$("#wait_image_visit_submit_doc").show();
-												alert (localStorage.base_url+'doctor_visit_submit_pharma?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&client_id='+visitClientId+'&visit_type='+visit_type+'&schedule_date='+scheduled_date+'&msg=' +encodeURI(msg)+'&lat='+lat+'&long='+longitude+'&v_with='+v_with+'&route='+market_Id+'&doc_others='+doc_others+'&location_detail='+localStorage.location_detail+'&imageName='+imageName+'&v_shift='+v_shift)	
+												//alert (localStorage.base_url+'doctor_visit_submit_pharma?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&client_id='+visitClientId+'&visit_type='+visit_type+'&schedule_date='+scheduled_date+'&msg=' +encodeURI(msg)+'&lat='+lat+'&long='+longitude+'&v_with='+v_with+'&route='+market_Id+'&doc_others='+doc_others+'&location_detail='+localStorage.location_detail+'imageName='+imageName)	
 										$.ajax(localStorage.base_url+'doctor_visit_submit_pharma?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&client_id='+visitClientId+'&visit_type='+visit_type+'&schedule_date='+scheduled_date+'&msg=' +encodeURI(msg)+'&lat='+lat+'&long='+longitude+'&v_with='+v_with+'&route='+market_Id+'&doc_others='+doc_others+'&location_detail='+localStorage.location_detail+'&imageName='+imageName+'&v_shift='+v_shift,{
 										// cid:localStorage.cid,rep_id:localStorage.user_id,rep_pass:localStorage.user_pass,synccode:localStorage.synccode,
 										type: 'POST',
